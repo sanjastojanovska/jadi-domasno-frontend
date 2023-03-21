@@ -2,91 +2,92 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.grid{
-    @extend %section;
-    // @extend %wrap;
-    display: flex;
-    max-width: 95%;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: space-between;
+.grid {
+  @extend %section;
+  display: flex;
+  max-width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    max-width: 90%;
+  }
+
+  .widget-chefs {
+    padding-top: 0;
+    flex-basis: 75%;
+
     @media (max-width: 1000px) {
-        flex-wrap: wrap;
-        max-width: 90%;
+      flex-basis: 100%;
+      max-width: 100%;
     }
-    .widget-chefs{
-                    padding-top: 0;
-                    flex-basis: 75%;
-                    @media (max-width: 1000px) {
-                        flex-basis: 100%;
-                        max-width: 100%;
-                    }
-                }
-    .filters{
-        flex-basis: 25%;
-        flex-shrink: 0;
-        
-        @media (max-width: 1000px) {
-            flex-basis: 100%;
-            margin-bottom: var.$gutter-base *2;
-        }
-        
-        .filters-parent{
-            background-color: var.$background-color-tertiary;
-            padding: var.$gutter-base;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
-            border-radius: 2rem;
-            width: 90% ;
-            i{
-                color: var.$text-color-primary;
-            }
+  }
 
-            @media (max-width: 1000px) {
-                width: 100% ;
-            }
+  .filters {
+    flex-basis: 25%;
+    flex-shrink: 0;
 
-            .input-grid{
-                display: flex;
-                justify-content: space-between;
-            }
-            .species{
-                display: flex;
-                // flex-basis: 50%;
-                // flex-wrap: wrap;
-                // flex-direction: column;
-                .btn-species{
-                    border: 1px solid var.$text-color-primary;
-                    background-color: var.$text-color-secondary;
-                    color: var.$text-color-base;
-
-
-                }
-            }
-        }
-        
-            .cuisine-food{
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: math.div(var.$gutter-base, 2);
-                input{
-                    display: none;
-                    &:checked + label{
-                        background-color: var.$text-color-primary;
-                        color: var.$text-color-secondary;
-                    }
-                }
-                label{
-                border-radius: 5px;
-                padding: math.div(var.$gutter-base, 5);
-                border-bottom: 2px solid var.$text-color-primary;
-                background-color: var.$text-color-secondary;
-                width: 100%;
-                display: block;
-                text-align: center;
-                cursor: pointer;
-            }
-            } 
-        
+    @media (max-width: 1000px) {
+      flex-basis: 100%;
+      margin-bottom: var.$gutter-base * 2;
     }
 
+    .filters-parent {
+      background-color: var.$background-color-tertiary;
+      padding: var.$gutter-base;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+      border-radius: 2rem;
+      width: 90%;
+
+      i {
+        color: var.$text-color-primary;
+      }
+
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+
+      .input-grid {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .species {
+        display: flex;
+
+        .btn-species {
+          border: 1px solid var.$text-color-primary;
+          background-color: var.$text-color-secondary;
+          color: var.$text-color-base;
+        }
+      }
+    }
+
+    .cuisine-food {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: math.div(var.$gutter-base, 2);
+
+      input {
+        display: none;
+        &:checked + label {
+          background-color: var.$text-color-primary;
+          color: var.$text-color-secondary;
+        }
+      }
+      
+      label {
+        border-radius: 5px;
+        padding: math.div(var.$gutter-base, 5);
+        border-bottom: 2px solid var.$text-color-primary;
+        background-color: var.$text-color-secondary;
+        width: 100%;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
 }

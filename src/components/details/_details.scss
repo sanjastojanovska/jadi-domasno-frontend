@@ -2,109 +2,113 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.details{
-    @extend %section;
-     @extend %wrap;
-     max-width: 90%;
-     .grid-parent{
-         @media (max-width: 768px) {
-             justify-content: center;
-         }
-     }
+.details {
+  @extend %section;
+  @extend %wrap;
+  max-width: 90%;
 
-     .img-details{
-         flex-basis: 20%;
-         img{
-             border-radius: 50%;
-             width: 200px;
-            height: 200px;
-             max-width: 100%;
-             object-fit: cover;
-         }
-         @media (max-width: 1000px) {
-             flex-basis: 20%;
-         }
-         @media (max-width: 768px) {
-             flex-basis: 50%;
-         }
+  .grid-parent {
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
 
-     }
+  .img-details {
+    flex-basis: 20%;
 
+    img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      max-width: 100%;
+      object-fit: cover;
+    }
 
-     .about-chef{
-         flex-basis: 60%;
-         @media (max-width: 1000px) {
-             flex-basis: 80%;
-         }
-         @media (max-width: 768px) {
-             flex-basis: 100%;
-         }
-         .h1{
-             font-size: var.$heading-size-bigger;
-             font-weight: bold;
-         }
-         .buttons-item{
-             display: flex;
+    @media (max-width: 1000px) {
+      flex-basis: 20%;
+    }
 
-             .buttons-inner{
-             background-color: var.$background-color-detail;
-             padding: math.div(var.$gutter-base,2) math.div(var.$gutter-base, 1);
-             border-radius: math.div(var.$gutter-base,2.5);
-             border: 1px solid var.$background-color-chef;
-             &:not(:last-child){
+    @media (max-width: 768px) {
+      flex-basis: 50%;
+    }
+  }
 
-                   margin-right: var.$gutter-base;
+  .about-chef {
+    flex-basis: 60%;
 
-             }
+    @media (max-width: 1000px) {
+      flex-basis: 80%;
+    }
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+    }
 
-             i{
-                 color: var.$text-color-primary;
-             }
-         }
-         }
+    .h1 {
+      font-size: var.$heading-size-bigger;
+      font-weight: bold;
+    }
 
-         .about-inner{
-             display: flex;
-             justify-content: space-between;
+    .buttons-item {
+      display: flex;
 
-             p{
-                 font-size: var.$heading-size-medium;
-                 margin-bottom: 0;
-             }
+      .buttons-inner {
+        background-color: var.$background-color-detail;
+        padding: math.div(var.$gutter-base, 2) math.div(var.$gutter-base, 1);
+        border-radius: math.div(var.$gutter-base, 2.5);
+        border: 1px solid var.$background-color-chef;
+        &:not(:last-child) {
+          margin-right: var.$gutter-base;
+        }
 
-             .distance{
-                 display: flex;
-                 align-items: center;
-                 justify-content: space-between;
-                 font-size: var.$heading-size-small;
+        i {
+          color: var.$text-color-primary;
+        }
+      }
+    }
 
-                 img{
-                     width: var.$gutter-base;
-                     margin-right: 10px;
-                 }
-             }
-         }
+    .about-inner {
+      display: flex;
+      justify-content: space-between;
 
-         .about-para{
-             color: var.$background-color-chef;
-             margin-top: var.$gutter-base;
-         }
-     }
-     .question{
-         text-align: center;
-         flex-basis: 20%;
-         @media (max-width: 1000px) {
-             display: none;
-         }
+      p {
+        font-size: var.$heading-size-medium;
+        margin-bottom: 0;
+      }
 
-         p{
-             font-size: var.$heading-size-small;
-         }
-         .btn{
-             background-color: var.$text-color-secondary;
-             color: var.$text-color-base;
-             border-color: var.$text-color-primary;
-         }
-     }
+      .distance {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: var.$heading-size-small;
 
- }
+        img {
+          width: var.$gutter-base;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .about-para {
+      color: var.$background-color-chef;
+      margin-top: var.$gutter-base;
+    }
+
+  }
+  
+  .question {
+    text-align: center;
+    flex-basis: 20%;
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    p {
+      font-size: var.$heading-size-small;
+    }
+    .btn {
+      background-color: var.$text-color-secondary;
+      color: var.$text-color-base;
+      border-color: var.$text-color-primary;
+    }
+  }
+}

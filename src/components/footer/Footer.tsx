@@ -20,33 +20,33 @@ const Footer: React.FC<Props> = (props) => {
                   </div>
                 </div>
                 <div className="icon-btn">
-                  <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i className="fa-brands fa-linkedin"></i></a>
-                  <a href="#"><i className="fa-brands fa-youtube"></i></a>
+                  <a href="/"><i className="fa-brands fa-facebook"></i></a>
+                  <a href="/"><i className="fa-brands fa-twitter"></i></a>
+                  <a href="/"><i className="fa-brands fa-linkedin"></i></a>
+                  <a href="/"><i className="fa-brands fa-youtube"></i></a>
                 </div>
               </div>
             </div>
             <div className="grid-item">
               <div className="grid-item-inner">
                 <ul>
-                  <li><a href="#">За нас</a></li>
-                  <li><a href="#">Мени</a></li>
-                  <li><a href="#">Стани готвач</a></li>
-                  <li><a href="#">Најави се</a></li>
-                  <li><a href="#">FAQ</a></li>
+                  <li><a href="/">За нас</a></li>
+                  <li><a href="/">Мени</a></li>
+                  <li><a href="/">Стани готвач</a></li>
+                  <li><a href="/">Најави се</a></li>
+                  <li><a href="/">FAQ</a></li>
                 </ul>
               </div>
             </div>
             <div className="grid-item">
               <div className="grid-item-inner">
                 <ul className="list-style">
-                  <li><a href="#">Правни</a></li>
-                  <li><a href="#">Политика за приватност</a></li>
-                  <li><a href="#">Услови за веб станица</a></li>
-                  <li><a href="#">Прифатлиа политика за користење</a></li>
-                  <li><a href="#">Политика за колашиња</a></li>
-                  <li><a href="#">Општи Услови</a></li>
+                  <li><a href="/">Правни</a></li>
+                  <li><a href="/">Политика за приватност</a></li>
+                  <li><a href="/">Услови за веб станица</a></li>
+                  <li><a href="/">Прифатлиа политика за користење</a></li>
+                  <li><a href="/">Политика за колашиња</a></li>
+                  <li><a href="/">Општи Услови</a></li>
                 </ul>
               </div>
             </div>

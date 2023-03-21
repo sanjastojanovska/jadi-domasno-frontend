@@ -6,11 +6,9 @@ interface Props {
 }
 
 const GridFood: React.FC<Props> = ({ foodMenu }) => {
-   // Shuffle the chefs array
-   const shuffledMenus = foodMenu.sort(() => Math.random() - 0.5);
+  const shuffledMenus = foodMenu.sort(() => Math.random() - 0.5);
 
-   // Return the first three shuffled chefs
-   const randomMenus = shuffledMenus.slice(0, 6);
+  const randomMenus = shuffledMenus.slice(0, 6);
 
   return (
     <div className="grid-food">
@@ -32,14 +30,6 @@ const GridFood: React.FC<Props> = ({ foodMenu }) => {
                       <i className="fa fa-star"></i>
                       <i className="fa fa-star"></i>
                       <i className="fa fa-star"></i>
-
-                      {/* {Array.from(Array(foodItem.meal_rating).keys()).map((star, i) => (
-                        <i key={`star-${i}`} className="fa fa-star"></i>
-                      ))}
-
-                      {Array.from(Array(5 - foodItem.meal_rating).keys()).map((star, i) => (
-                        <i key={`star-${i}`} className="far fa-star"></i>
-                      ))} */}
                     </div>
                   </div>
                   <div>

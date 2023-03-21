@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FaqItem from "./FaqItem";
 
 export interface FaqItemInt {
@@ -15,18 +15,17 @@ const WidgetFaq: React.FC = () => {
     },
     {
       question: "Како да променам коментар?",
-      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis qui officiis sequi a aut quo odit amet cum consequatur est quidem, quisquam unde dolorum sint similique quis laboriosam assumenda nostrum?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis qui officiis sequi a aut quo odit amet cum consequatur est quidem, quisquam unde dolorum sint similique quis laboriosam assumenda nostrum?",
     },
     {
-      question:
-        "Како да променам рецепт?",
-      answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis qui officiis sequi a aut quo odit amet cum consequatur est quidem, quisquam unde dolorum sint similique quis laboriosam assumenda nostrum?",
-    }
-  ]
-
+      question: "Како да променам рецепт?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis qui officiis sequi a aut quo odit amet cum consequatur est quidem, quisquam unde dolorum sint similique quis laboriosam assumenda nostrum?",
+    },
+  ];
 
   return (
-    
     <div className="widget-faq">
       <div className="img-box">
         <img src="/images/reviews-chef1.svg" alt="" />
@@ -34,14 +33,10 @@ const WidgetFaq: React.FC = () => {
       <div className="content-box">
         <h2>Најчесто поставувани прашања</h2>
         <div className="faqs">
-        {faqArr.map((faq, index) => (
-           <FaqItem faq={faq} />
-        ))}
-      </div>
-
-        
-
-
+          {faqArr.map((faq, index) => (
+            <FaqItem faq={faq} />
+          ))}
+        </div>
       </div>
     </div>
   );

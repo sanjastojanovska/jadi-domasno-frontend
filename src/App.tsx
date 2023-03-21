@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import HowItWorks from "./pages/HowItWorks";
 import ChefsOverview from "./pages/ChefsOverview";
@@ -12,23 +12,6 @@ function App() {
   return (
     <Router>
       <Header />
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/how-it-works">How it works</Link>
-          </li>
-          <li>
-            <Link to="/chefs">Chefs</Link>
-          </li>
-          <li>
-            <Link to="/menu">Menu</Link>
-          </li>
-        </ul>
-      </nav> */}
-
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/how-it-works" element={<HowItWorks />} />

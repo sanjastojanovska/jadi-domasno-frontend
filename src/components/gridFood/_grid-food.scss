@@ -5,12 +5,14 @@
 .grid-food{
     @extend %section;
     @extend %wrap;
+
     .h3{
         text-transform: uppercase;
         color: var.$text-color-primary;
         font-weight: bold;
         font-size: var.$heading-size-small;
     }
+
     .grid-parent{
         margin-top: var.$gutter-base;
         img{
@@ -18,12 +20,14 @@
         }
 
         .grid-item{
+
            .grid-item-inner{
             background-color: var.$text-color-secondary;
             border-radius: 2rem;
 
             .inner-content{
                 padding: 1rem;
+                
                 .name-price{
                     display: flex;
                     justify-content: space-between;

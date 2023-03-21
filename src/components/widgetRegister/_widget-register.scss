@@ -2,16 +2,15 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.widget-register{
-    @extend %section;
-    @extend %wrap;
-    text-align: center;
-    
-    .btn{
-        border: none;
-        padding-right: var.$gutter-base* 3;
-        padding-left: var.$gutter-base* 3;
-        margin-top: var.$gutter-base * 1.5;
-    }
-    
+.widget-register {
+  @extend %section;
+  @extend %wrap;
+  text-align: center;
+
+  .btn {
+    border: none;
+    padding-right: var.$gutter-base * 3;
+    padding-left: var.$gutter-base * 3;
+    margin-top: var.$gutter-base * 1.5;
+  }
 }

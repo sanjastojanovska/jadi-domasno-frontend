@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import FiltersChefs, { IFiltersChefs } from "../components/filters-chefs/FiltersChefs";
+import FiltersChefs, {
+  IFiltersChefs,
+} from "../components/filters-chefs/FiltersChefs";
 
 export interface Chef {
   id: string;
@@ -26,23 +28,28 @@ const ChefsOverview: React.FC = () => {
   const [chefs, setChefs] = useState<Chef[]>([]);
   const [chefsRendered, setChefsRendered] = useState<Chef[]>([]);
   const [areResultsLoading, setResultsLoading] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState<{ filterBy: { [key: string]: string[] } }>({ filterBy: { рејтинг: [], кујна: [] } });
+  const [selectedFilters, setSelectedFilters] = useState<{
+    filterBy: { [key: string]: string[] };
+  }>({ filterBy: { рејтинг: [], кујна: [] } });
 
   useEffect(() => {
     fetch("https://glacier-glib-fox.glitch.me/chefs")
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setChefs(data);
         setChefsRendered(data);
       })
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }, []);
 
   const filterResults = useCallback(
     (currentFilters: IFiltersChefs) => {
       if (Object.entries(currentFilters).length > 0) {
-        const filteredChefs = chefs.filter(m => {
-          return currentFilters.кујна?.some(a => m.cuisine.includes(a)) || m.rating >= +currentFilters.рејтинг;
+        const filteredChefs = chefs.filter((m) => {
+          return (
+            currentFilters.кујна?.some((a) => m.cuisine.includes(a)) ||
+            m.rating >= +currentFilters.рејтинг
+          );
         });
 
         setChefsRendered(filteredChefs);
@@ -59,7 +66,7 @@ const ChefsOverview: React.FC = () => {
     const filters: any = {};
     const allFilters = ["рејтинг", "кујна"];
 
-    allFilters.forEach(f => {
+    allFilters.forEach((f) => {
       if (query.get(f)) {
         filters[f] = [...query.get(f)?.split(",")!];
       }
@@ -74,7 +81,6 @@ const ChefsOverview: React.FC = () => {
   }, [filterResults]);
 
   if (Object.keys(chefs).length === 0) {
-    // return <Navigate to="/404" />;
     return null;
   }
 
@@ -83,18 +89,30 @@ const ChefsOverview: React.FC = () => {
       <div className="content-section">
         <h2 className="main-title">Нашите готвачи</h2>
         <p>Јади Домашно поврзува талентирани готвачи со локални клиенти.</p>
-        <p>Ние веруваме во обезбедувањето на шефовите во нашата заедница - поединци кои отсекогаш сонувале да градат сопствен бизнис со храна - можност да заработат значаен приход правејќи го она што го сакаат! Ние, исто така, веруваме дека секој човек треба да има пристап до здрав, домашен оброк по прифатлива цена. Градење заедница посветена на економско зајакнување и културна инклузивност - затоа почнавме да го градиме нашето семејство.</p>
+        <p>
+          Ние веруваме во обезбедувањето на шефовите во нашата заедница -
+          поединци кои отсекогаш сонувале да градат сопствен бизнис со храна -
+          можност да заработат значаен приход правејќи го она што го сакаат!
+          Ние, исто така, веруваме дека секој човек треба да има пристап до
+          здрав, домашен оброк по прифатлива цена. Градење заедница посветена на
+          економско зајакнување и културна инклузивност - затоа почнавме да го
+          градиме нашето семејство.
+        </p>
       </div>
 
       <div className="grid">
-        <FiltersChefs initialFilters={selectedFilters} handleSetResultsLoading={setResultsLoading} filterResults={filterResults} />
+        <FiltersChefs
+          initialFilters={selectedFilters}
+          handleSetResultsLoading={setResultsLoading}
+          filterResults={filterResults}
+        />
 
         <div className="widget-chefs">
           <div className="grid-parent">
             {areResultsLoading && <p>Loading...</p>}
 
             {!areResultsLoading && chefsRendered.length > 0 ? (
-              chefsRendered.map(chef => (
+              chefsRendered.map((chef) => (
                 <div className="grid-item" key={chef.id}>
                   <Link to={`/chefs/${chef.id}`} className="grid-item-inner">
                     <img src={chef.avatar_image} alt="" />
@@ -102,11 +120,15 @@ const ChefsOverview: React.FC = () => {
                       <div className="head-flex">
                         <p>{chef.fullname}</p>
                         <div className="star-icon">
-                          {Array.from(Array(Math.floor(chef.rating)).keys()).map((star, i) => (
+                          {Array.from(
+                            Array(Math.floor(chef.rating)).keys()
+                          ).map((star, i) => (
                             <i key={`star-${i}`} className="fa fa-star" />
                           ))}
 
-                          {Array.from(Array(5 - Math.floor(chef.rating)).keys()).map((star, i) => (
+                          {Array.from(
+                            Array(5 - Math.floor(chef.rating)).keys()
+                          ).map((star, i) => (
                             <i key={`star-${i}`} className="far fa-star" />
                           ))}
                         </div>

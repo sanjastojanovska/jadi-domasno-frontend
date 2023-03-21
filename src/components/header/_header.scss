@@ -45,7 +45,6 @@
     transition: max-height .2s ease-out;
 }
 
-/* menu icon */
 
 .header .menu-icon {
     cursor: pointer;
@@ -84,7 +83,6 @@
     top: -5px;
 }
 
-/* menu btn */
 
 .header .menu-btn {
     display: none;
@@ -122,6 +120,7 @@
     position: absolute;
     right: 0;
     top: 10px;
+    
     @media (min-width:1000px) and (max-width: 1199px)  {
         display: none;
     }
@@ -135,6 +134,7 @@
     border-radius: 5px;
     border: 1px solid;
     cursor: pointer;
+
     @media (max-width:500px) {
         display: none;
     }

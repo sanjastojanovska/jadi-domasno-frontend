@@ -5,7 +5,7 @@ interface Props {
   chefDetail: Chef;
 }
 
-const Details: React.FC<Props> = ({chefDetail}) => {
+const Details: React.FC<Props> = ({ chefDetail }) => {
   return (
     <div className="details">
       <div className="grid-parent">

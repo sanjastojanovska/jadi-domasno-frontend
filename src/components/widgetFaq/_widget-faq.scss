@@ -6,7 +6,9 @@
   @extend %section;
   @extend %wrap;
   text-align: center;
+
   .grid-parent {
+
     .grid-item {
       flex-basis: 100%;
     }
@@ -18,14 +20,16 @@
     border: 1px solid var.$text-color-primary;
     text-align: left;
 
-    &.open{
-        .faq-question {
-            margin-bottom: 15px;
-          }
-          .faq-answer {
-            max-height: 1000px;
-            opacity: 1;
-          }
+    &.open {
+
+      .faq-question {
+        margin-bottom: 15px;
+      }
+
+      .faq-answer {
+        max-height: 1000px;
+        opacity: 1;
+      }
     }
 
     .faq-question {
@@ -35,6 +39,7 @@
       transition: all 0.4s ease;
 
       font-weight: bold;
+
       i {
         content: "";
         position: absolute;
@@ -44,15 +49,13 @@
         transition: all 0.2s ease;
         color: var.$text-color-primary;
       }
-      
     }
+    
     .faq-answer {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.2s ease;
-      }
-
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
   }
-
 }

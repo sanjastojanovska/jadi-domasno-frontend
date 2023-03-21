@@ -9,10 +9,8 @@ const WidgetChefs: React.FC = () => {
     fetch("https://glacier-glib-fox.glitch.me/chefs")
       .then((response) => response.json())
       .then((data) => {
-        // Shuffle the chefs array
         const shuffledChefs = data.sort(() => Math.random() - 0.5);
 
-        // Return the first three shuffled chefs
         const randomChefs = shuffledChefs.slice(0, 3);
 
         setRandomChefsData(randomChefs);
@@ -36,9 +34,11 @@ const WidgetChefs: React.FC = () => {
                       <i key={`star-${i}`} className="fa fa-star"></i>
                     ))}
 
-                    {Array.from(Array(5 - chef?.rating).keys()).map((star, i) => (
-                      <i key={`star-${i}`} className="far fa-star"></i>
-                    ))}
+                    {Array.from(Array(5 - chef?.rating).keys()).map(
+                      (star, i) => (
+                        <i key={`star-${i}`} className="far fa-star"></i>
+                      )
+                    )}
                   </div>
                 </div>
                 <div className="food-count">

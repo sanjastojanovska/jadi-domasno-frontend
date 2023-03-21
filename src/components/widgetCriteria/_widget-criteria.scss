@@ -2,52 +2,53 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.widget-criteria{
-    @extend %section;
-    @extend %wrap;
-    text-align: center;
+.widget-criteria {
+  @extend %section;
+  @extend %wrap;
+  text-align: center;
 
-    .grid-parent{
-        margin-top: var.$gutter-base * 3;
+  .grid-parent {
+    margin-top: var.$gutter-base * 3;
 
-        .grid-item{
+    .grid-item {
+      flex-basis: 50%;
+      @media (max-width: 425px) {
+        flex-basis: 100%;
+      }
 
-            flex-basis: 50%;
-            @media (max-width:425px) {
-                flex-basis: 100%;
-              }
+      .grid-item-inner {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
 
-            .grid-item-inner{
-                display: flex;
-                align-items: center;
-                flex-direction: row;
+        .img-criteria {
+          margin-right: var.$gutter-base;
+          flex-basis: 30%;
+          flex-shrink: 0;
+          position: relative;
 
-                .img-criteria{
-                    margin-right: var.$gutter-base;
-                    flex-basis: 30%;
-                    flex-shrink: 0;
-                    position: relative;
-                    .number{
-                        background-color: var.$text-color-primary;
-                        color: var.$text-color-tertiary;
-                        width: var.$gutter-base;
-                        height: var.$gutter-base;
-                        display: inline-block;
-                        line-height: var.$gutter-base;
-                        position: absolute;
-                        top: -10px;
-                        right: -10px;
-                    }
-                    img{
-                        width: 100%;
-                    }
-                }
-                
-                p{
-                    font-size: var.$font-size-medium;
-                    text-align: left;
-                }
-            }
+          .number {
+            background-color: var.$text-color-primary;
+            color: var.$text-color-tertiary;
+            width: var.$gutter-base;
+            height: var.$gutter-base;
+            display: inline-block;
+            line-height: var.$gutter-base;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+          }
+          
+          img {
+            width: 100%;
+          }
         }
+
+        p {
+          font-size: var.$font-size-medium;
+          text-align: left;
+        }
+      }
     }
+  }
 }

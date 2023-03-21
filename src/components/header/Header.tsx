@@ -8,7 +8,7 @@ const Header: React.FC<Props> = (props) => {
 
   return (
     <div className={`header ${menuOpen ? " menu-open" : ""}`}>
-       <button className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+      <button className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         <span className="navicon"></span>
       </button>
 
@@ -53,7 +53,9 @@ const Header: React.FC<Props> = (props) => {
 
       <ul className="secondary-actions">
         <li>
-          <button className="btn-header"><i className="fas fa-search"></i>Пребарајте</button>
+          <button className="btn-header">
+            <i className="fas fa-search"></i>Пребарајте
+          </button>
         </li>
         <li>
           <Link to="/" className="icon-login">

@@ -10,7 +10,17 @@ export interface MenuItem {
   meal_price: number;
   meal_description: string;
   meal_prep_time: string;
-  cuisine: "Vegan" | "Vegetarian" | "Traditional" | "Chinese" | "Mediterranean" | "Salads" | "Fish" | "Italian" | "Mexican" | "Keto";
+  cuisine:
+    | "Vegan"
+    | "Vegetarian"
+    | "Traditional"
+    | "Chinese"
+    | "Mediterranean"
+    | "Salads"
+    | "Fish"
+    | "Italian"
+    | "Mexican"
+    | "Keto";
   availability: "денес" | "утре" | "нарачка";
   delivery: "delivery" | "pickup";
   chef: string;
@@ -21,24 +31,31 @@ const MenuOverview: React.FC = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [menuItemsRendered, setMenuItemsRendered] = useState<MenuItem[]>([]);
   const [areResultsLoading, setResultsLoading] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState<{ filterBy: { [key: string]: string[] } }>({ filterBy: { достапност: [], алергени: [], достава: [], рејтинг: [] } });
+  const [selectedFilters, setSelectedFilters] = useState<{
+    filterBy: { [key: string]: string[] };
+  }>({ filterBy: { достапност: [], алергени: [], достава: [], рејтинг: [] } });
 
   useEffect(() => {
     fetch("https://glacier-glib-fox.glitch.me/menu")
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setMenuItems(data);
         setMenuItemsRendered(data);
       })
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }, []);
 
   const filterResults = useCallback(
     (currentFilters: IFilters) => {
       if (Object.entries(currentFilters).length > 0) {
         console.log(currentFilters);
-        const filteredMenu = menuItems.filter(m => {
-          return currentFilters.алергени?.some(a => m.alergeni.includes(a)) || currentFilters.достапност?.includes(m.availability) || m.meal_rating >= +currentFilters.рејтинг || currentFilters.достава?.includes(m.delivery);
+        const filteredMenu = menuItems.filter((m) => {
+          return (
+            currentFilters.алергени?.some((a) => m.alergeni.includes(a)) ||
+            currentFilters.достапност?.includes(m.availability) ||
+            m.meal_rating >= +currentFilters.рејтинг ||
+            currentFilters.достава?.includes(m.delivery)
+          );
         });
 
         setMenuItemsRendered(filteredMenu);
@@ -55,7 +72,7 @@ const MenuOverview: React.FC = () => {
     const filters: any = {};
     const allFilters = ["достапност", "алергени", "рејтинг", "достава"];
 
-    allFilters.forEach(f => {
+    allFilters.forEach((f) => {
       if (query.get(f)) {
         filters[f] = [...query.get(f)?.split(",")!];
       }
@@ -73,7 +90,11 @@ const MenuOverview: React.FC = () => {
     <div className="MenuOverview">
       <CalendarSliderMenu />
       <div className="grid">
-        <FiltersMenu initialFilters={selectedFilters} handleSetResultsLoading={setResultsLoading} filterResults={filterResults} />
+        <FiltersMenu
+          initialFilters={selectedFilters}
+          handleSetResultsLoading={setResultsLoading}
+          filterResults={filterResults}
+        />
 
         <div className="widget-chefs">
           <div className="grid-parent">
@@ -96,11 +117,15 @@ const MenuOverview: React.FC = () => {
                         </div>
 
                         <div className="star-icon">
-                          {Array.from(Array(Math.floor(menuItem.meal_rating)).keys()).map((star, i) => (
+                          {Array.from(
+                            Array(Math.floor(menuItem.meal_rating)).keys()
+                          ).map((star, i) => (
                             <i key={`star-${i}`} className="fa fa-star" />
                           ))}
 
-                          {Array.from(Array(5 - Math.floor(menuItem.meal_rating)).keys()).map((star, i) => (
+                          {Array.from(
+                            Array(5 - Math.floor(menuItem.meal_rating)).keys()
+                          ).map((star, i) => (
                             <i key={`star-${i}`} className="far fa-star" />
                           ))}
                         </div>

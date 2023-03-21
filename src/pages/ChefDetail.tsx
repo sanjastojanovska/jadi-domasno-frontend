@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import WidgetReviewsSlider from "../components/widgetReviewsSlider/WidgetReviewsSlider";
 import Details from "../components/details/Details";
 import GridFood from "../components/gridFood/GridFood";
 import CalendarSliderChef from "../components/calendarSliderChef/CalendarSliderChef";
 import { Chef } from "./ChefsOverview";
 import { MenuItem } from "./MenuOverview";
-// import { Chef } from "./ChefsOverview";
 
-interface Props {}
-
-const ChefDetail: React.FC<Props> = (props) => {
+const ChefDetail: React.FC = () => {
   const { id } = useParams();
-  const [currentChef, setCurrentChef] = useState<Chef>({}as Chef);
+  const [currentChef, setCurrentChef] = useState<Chef>({} as Chef);
   const [foodMenus, setFoodMenus] = useState<MenuItem[]>([]);
 
   useEffect(() => {
@@ -29,8 +26,7 @@ const ChefDetail: React.FC<Props> = (props) => {
       .catch((error) => console.error(error));
   }, [id]);
 
-  if(Object.keys(currentChef).length === 0) {
-    // return <Navigate to="/404" />;
+  if (Object.keys(currentChef).length === 0) {
     return null;
   }
 
@@ -39,12 +35,11 @@ const ChefDetail: React.FC<Props> = (props) => {
       <div className="image-heading">
         <img src="/images/image-heading.jpg" alt="" />
       </div>
-      <Details chefDetail={currentChef}/>
-      <CalendarSliderChef/>
-      <GridFood foodMenu={foodMenus}/>
-      <WidgetReviewsSlider testimonials={currentChef.testimonials}/>
+      <Details chefDetail={currentChef} />
+      <CalendarSliderChef />
+      <GridFood foodMenu={foodMenus} />
+      <WidgetReviewsSlider testimonials={currentChef.testimonials} />
     </div>
-
   );
 };
 

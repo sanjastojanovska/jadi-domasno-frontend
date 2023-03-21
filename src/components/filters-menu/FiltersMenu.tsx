@@ -30,17 +30,13 @@ const FiltersMenu: React.FC<Props> = ({
 
         const activeFilters: any = {};
 
-        // set active filters only the ones with values
         for (const [key, value] of Object.entries(values.filterBy)) {
           if (value.length > 0) {
             activeFilters[key] = value;
           }
         }
 
-        // console.log(activeFilters);
-
         if (Object.keys(activeFilters).length > 0) {
-          // if there are active filters - set them on the URL
           const urlParams = new URLSearchParams();
           Object.keys(activeFilters).map((f) => {
             return urlParams.set(f, values.filterBy[f].toString());
@@ -49,14 +45,11 @@ const FiltersMenu: React.FC<Props> = ({
           const newUrl = window.location.pathname + "?" + urlParams.toString();
           window.history.pushState({ path: newUrl }, "", newUrl);
         } else {
-          // else remove the filters from the url (include the page)
-
           const urlParams = new URLSearchParams();
           Object.keys(activeFilters).map((f) => {
             return urlParams.delete(f);
           });
 
-          // check if there are more filters in the url, if not, remove the "?"
           const newUrl =
             window.location.pathname +
             `${urlParams.values.length > 0 ? `?${urlParams.toString()}` : ""}`;
@@ -192,7 +185,9 @@ const FiltersMenu: React.FC<Props> = ({
                       submitForm();
                     }}
                   />
-                  <label htmlFor="rating-3"><i className="fas fa-star"></i> 3+</label>
+                  <label htmlFor="rating-3">
+                    <i className="fas fa-star"></i> 3+
+                  </label>
                 </div>
 
                 <div className="checkbox-circle">
@@ -208,7 +203,9 @@ const FiltersMenu: React.FC<Props> = ({
                       submitForm();
                     }}
                   />
-                  <label htmlFor="rating-4"><i className="fas fa-star"></i> 4+</label>
+                  <label htmlFor="rating-4">
+                    <i className="fas fa-star"></i> 4+
+                  </label>
                 </div>
 
                 <div className="checkbox-circle">
@@ -224,7 +221,9 @@ const FiltersMenu: React.FC<Props> = ({
                       submitForm();
                     }}
                   />
-                  <label htmlFor="rating-5"><i className="fas fa-star"></i> 5</label>
+                  <label htmlFor="rating-5">
+                    <i className="fas fa-star"></i> 5
+                  </label>
                 </div>
               </div>
 

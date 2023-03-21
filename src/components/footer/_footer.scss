@@ -2,104 +2,109 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.footer{
-    background-color: var.$background-color-secondary;
-    color: var.$text-color-tertiary;
-    @extend %section;
+.footer {
+  background-color: var.$background-color-secondary;
+  color: var.$text-color-tertiary;
+  @extend %section;
 
-    .footer-inner{
-        @extend %wrap;
-    }
-    
-    
-    .grid-parent{
-        
-       
-        .grid-item{
-            flex-basis: 25%;
+  .footer-inner {
+    @extend %wrap;
+  }
 
-            @media (max-width:768px) {
-                flex-basis: 50% ;
-              }
-          
-              @media (max-width:425px) {
-                flex-basis: 100%;
-              }
+  .grid-parent {
+    .grid-item {
+      flex-basis: 25%;
 
-            .grid-item-inner{
-               .image{
-                text-align: center;
-                img{
-                    width: var.$gutter-base * 2;
-                }
-               }
-                
+      @media (max-width: 768px) {
+        flex-basis: 50%;
+      }
 
-                h4{
-                    font-size: var.$heading-size-big;
-                }
+      @media (max-width: 425px) {
+        flex-basis: 100%;
+      }
 
-                ul li{
-                    margin-bottom: math.div(var.$gutter-base,3);
+      .grid-item-inner {
 
-                    a{
-                        color: var.$text-color-tertiary;
-                    }
-                } 
+        .image {
+          text-align: center;
 
-                .list-style{
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-
-                    li{margin-bottom: math.div(var.$gutter-base,3);}
-
-                    a{
-                        text-decoration: none;
-                    }
-                    :hover{
-                        color: var.$text-color-primary;
-                    }
-                }
-                .logo-img{
-                    display: flex;
-                    align-items: center;
-                    img{
-                        width: var.$gutter-base *3;
-                    }
-                }
-                .icon-btn{
-                    text-align: center;
-                    margin-top: var.$gutter-base;
-                    a{
-                        margin-right: math.div(var.$gutter-base, 3);
-                        color: var.$text-color-tertiary;
-                        border: 1px solid;
-                        border-radius: 50%;
-                        padding: math.div(var.$gutter-base,3);
-                        :hover{
-                            color: var.$text-color-primary;
-                        }
-                    }
-                }
-            }
-            .news-btn{
-                display: flex;
-                flex-direction: column;
-
-                .btn{
-                    border: none;
-                    margin-top:math.div(var.$gutter-base,3);
-                }
-
-                input{
-                    padding: math.div(var.$gutter-base, 3);
-                    border-radius: 2em;
-                    text-align: center;
-                    border: none;
-                }
-            }
+          img {
+            width: var.$gutter-base * 2;
+          }
         }
-    }
 
+        h4 {
+          font-size: var.$heading-size-big;
+        }
+
+        ul li {
+          margin-bottom: math.div(var.$gutter-base, 3);
+
+          a {
+            color: var.$text-color-tertiary;
+          }
+        }
+
+        .list-style {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            margin-bottom: math.div(var.$gutter-base, 3);
+          }
+
+          a {
+            text-decoration: none;
+          }
+          :hover {
+            color: var.$text-color-primary;
+          }
+        }
+
+        .logo-img {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: var.$gutter-base * 3;
+          }
+        }
+
+        .icon-btn {
+          text-align: center;
+          margin-top: var.$gutter-base;
+
+          a {
+            margin-right: math.div(var.$gutter-base, 3);
+            color: var.$text-color-tertiary;
+            border: 1px solid;
+            border-radius: 50%;
+            padding: math.div(var.$gutter-base, 3);
+
+            :hover {
+              color: var.$text-color-primary;
+            }
+          }
+        }
+      }
+
+      .news-btn {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+          border: none;
+          margin-top: math.div(var.$gutter-base, 3);
+        }
+
+        input {
+          padding: math.div(var.$gutter-base, 3);
+          border-radius: 2em;
+          text-align: center;
+          border: none;
+        }
+      }
+    }
+  }
 }

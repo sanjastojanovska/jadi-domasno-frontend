@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import WidgetChefs from "../components/widgetChefs/WidgetChefs";
 import WidgetStories from "../components/widgetStories/WidgetStories";
 import WidgetCriteria from "../components/widgetCriteria/WidgetCriteria";
 import WidgetSteps from "../components/widgetSteps/WidgetSteps";
@@ -8,8 +7,6 @@ import WidgetRegister from "../components/widgetRegister/WidgetRegister";
 import WidgetFaq from "../components/widgetFaq/WidgetFaq";
 import WidgetStepsGurman from "../components/widgetStepsGurman/WidgetStepsGurman";
 import Toggle from "../components/toggle/Toggle";
-
-
 
 export type ToggleType = "chef" | "gurman";
 
@@ -21,7 +18,7 @@ const HowItWorks: React.FC = () => {
     const query = new URLSearchParams(window.location.search);
     const filter = query.get("filter");
     if (filter) {
-      setSelectedFilter((filter as ToggleType));
+      setSelectedFilter(filter as ToggleType);
     }
   }, []);
 
@@ -35,24 +32,24 @@ const HowItWorks: React.FC = () => {
   };
 
   return (
-    <div>      
+    <div>
       <Toggle handleFilterToggle={handleFilterToggle} />
 
       {selectedFilter === "chef" ? (
         <>
-          <WidgetStories/>
-          <WidgetCriteria/>
-          <WidgetSteps/>
-          <WidgetReviews/>
-          <WidgetRegister/>
-          <WidgetFaq/>
+          <WidgetStories />
+          <WidgetCriteria />
+          <WidgetSteps />
+          <WidgetReviews />
+          <WidgetRegister />
+          <WidgetFaq />
         </>
       ) : (
         <>
-          <WidgetStories/>
-          <WidgetRegister/>
-          <WidgetStepsGurman/>
-          <WidgetFaq/>
+          <WidgetStories />
+          <WidgetRegister />
+          <WidgetStepsGurman />
+          <WidgetFaq />
         </>
       )}
     </div>

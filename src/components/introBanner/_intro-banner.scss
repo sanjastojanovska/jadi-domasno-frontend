@@ -2,70 +2,69 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.intro-banner{
-    @extend %section;
-    @extend %wrap;
+.intro-banner {
+  @extend %section;
+  @extend %wrap;
+  text-align: center;
+
+  .grid-parent {
+    align-items: center;
     text-align: center;
-    .grid-parent{
-        align-items: center;
-        text-align: center;
 
-        .grid-item{
-            flex-basis: 50%;
+    .grid-item {
+      flex-basis: 50%;
 
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+      }
 
-            @media (max-width:768px) {
-                flex-basis: 100%;
-            }
+      .grid-item-inner {
 
-            .grid-item-inner{
+        .content {
+          display: flex;
+          color: var.$text-color-primary;
+          justify-content: center;
+          align-items: center;
 
+          h1 {
+            margin-bottom: 0;
+          }
 
-                .content{
-                    display: flex;
-                    color: var.$text-color-primary;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        margin-bottom: 0;
-                    }
-                    img{
-                        width: var.$gutter-base * 3;
-                    }
-                }
-
-                .second-content{
-                    margin-top: var.$gutter-base;
-                    overflow: hidden;
-                }
-
-                form{
-                    display: flex;
-                    justify-content: center;
-                    @media (max-width: 1000px) {
-                        flex-direction: column;
-                    }
-
-                    input{
-                        padding: math.div(var.$gutter-base,3) (var.$gutter-base);
-                        border: none;
-                        border-radius: 2rem;
-                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-                        margin-right: math.div(var.$gutter-base, 1.5);
-                        @media (max-width: 1000px) {
-                            margin-bottom: var.$gutter-base;
-                            width: 100%;
-                        }
-                    }
-
-                    .btn{
-                        border: none;
-                    }
-                }
-
-            }
+          img {
+            width: var.$gutter-base * 3;
+          }
         }
 
+        .second-content {
+          margin-top: var.$gutter-base;
+          overflow: hidden;
+        }
 
+        form {
+          display: flex;
+          justify-content: center;
+          @media (max-width: 1000px) {
+            flex-direction: column;
+          }
+
+          input {
+            padding: math.div(var.$gutter-base, 3) (var.$gutter-base);
+            border: none;
+            border-radius: 2rem;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-right: math.div(var.$gutter-base, 1.5);
+            
+            @media (max-width: 1000px) {
+              margin-bottom: var.$gutter-base;
+              width: 100%;
+            }
+          }
+
+          .btn {
+            border: none;
+          }
+        }
+      }
     }
+  }
 }

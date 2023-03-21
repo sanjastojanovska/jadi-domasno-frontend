@@ -2,65 +2,68 @@
 @use "../../styles/abstracts/variables" as var;
 @use "sass:math";
 
-.widget-cta{
-    @extend %section;
-    @extend %wrap;
-    text-align: center;
+.widget-cta {
+  @extend %section;
+  @extend %wrap;
+  text-align: center;
 
-    .title{
-        font-family: var.$font-family-base;
-    }
+  .title {
+    font-family: var.$font-family-base;
+  }
 
-    span{
-        color: var.$text-color-primary;
-    }
-    .grid-parent{
-        margin-top: var.$gutter-base * 2;
-        .grid-item{
-            flex-basis: 50%;
+  span {
+    color: var.$text-color-primary;
+  }
+  .grid-parent {
+    margin-top: var.$gutter-base * 2;
 
-            @media (max-width:768px) {
-                flex-basis: 50% ;
-              }
-          
-              @media (max-width:425px) {
-                flex-basis: 100%;
-              }
+    .grid-item {
+      flex-basis: 50%;
 
-            .grid-item-inner{
-                height: auto;
-                .cta-head{
-                    margin-top: math.div(var.$gutter-base, 2);
-                    margin-bottom: 0;
-                    font-size: var.$heading-size-small;
-                }
-                hr{
-                    border: 1px solid;
-                    color:var.$text-color-primary ;
-                    margin-top: math.div(var.$gutter-base, 1.5);
-                }
-                .inner-flex{
-                    display: flex;
-                    align-items: center;
-                    text-align: left;
-                    // padding: var.$gutter-base;
-                    // justify-content: space-between;
-                    .inner-icon{
-                        flex-basis: 10%;
-                        flex-shrink: 0;
-                        margin-right: var.$gutter-base;
-                        img{
-                            width: 100%;
-                        }
-                    }
-                    
-                }
-                button{
-                        border: none;
-                        margin-top: var.$gutter-base;
-                    }
- 
-            }
+      @media (max-width: 768px) {
+        flex-basis: 50%;
+      }
+
+      @media (max-width: 425px) {
+        flex-basis: 100%;
+      }
+
+      .grid-item-inner {
+        height: auto;
+
+        .cta-head {
+          margin-top: math.div(var.$gutter-base, 2);
+          margin-bottom: 0;
+          font-size: var.$heading-size-small;
         }
+
+        hr {
+          border: 1px solid;
+          color: var.$text-color-primary;
+          margin-top: math.div(var.$gutter-base, 1.5);
+        }
+
+        .inner-flex {
+          display: flex;
+          align-items: center;
+          text-align: left;
+
+          .inner-icon {
+            flex-basis: 10%;
+            flex-shrink: 0;
+            margin-right: var.$gutter-base;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+        
+        button {
+          border: none;
+          margin-top: var.$gutter-base;
+        }
+      }
     }
+  }
 }
