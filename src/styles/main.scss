@@ -1,0 +1,33 @@
+@use "core";
+//homepage
+@use "../components/introBanner/intro-banner";
+@use "../components/widgetValues/widget-values";
+@use "../components/widgetChefs/widget-chefs";
+@use "../components/widgetUsp/widget-usp";
+@use "../components/widgetReviews/widget-reviews";
+@use "../components/widgetCta/widget-cta";
+
+//how-it-works
+@use "../components/toggle/toggle";
+@use "../components/widgetStories/widget-stories";
+@use "../components/widgetCriteria/widget-criteria";
+@use "../components/widgetSteps/widget-steps";
+@use "../components/widgetRegister/widget-register";
+@use "../components/widgetFaq/widget-faq";
+
+//chef-detail
+@use"../components/widgetReviewsSlider/widget-reviews-slider";
+@use "../components/details/details";
+@use "../components/gridFood/grid-food";
+@use"../components/calendarSliderChef/calendar-slider-chef";
+
+//menu-overview
+@use "../components/calendarSliderMenu/calendar-slider-menu";
+@use "../components/gridMenuOverview/grid-menu-overview";
+
+//chef-overview
+@use  "../components/grid/grid";
+//footer
+@use "../components/footer/footer";
+// header
+@use "../components/header/header";

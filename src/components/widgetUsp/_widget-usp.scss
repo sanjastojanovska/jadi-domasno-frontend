@@ -1,0 +1,27 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+.widget-usp{
+    @extend %section;
+    @extend %wrap;
+    text-align: center; 
+
+    hr{
+        color: var.$text-color-primary;
+        border: 1px solid;
+    }
+
+    .grid-parent{
+        padding: var.$gutter-base ;
+
+        .grid-item{
+            p{
+                font-size: var.$heading-size-usp;
+                margin-bottom: 0;
+                color:var.$text-color-primary ;
+                
+            }
+        }
+    }
+}

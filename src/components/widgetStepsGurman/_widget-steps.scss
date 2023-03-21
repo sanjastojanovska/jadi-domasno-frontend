@@ -1,0 +1,52 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+.widget-steps{
+    @extend %section;
+    @extend %wrap;
+    max-width: 60%;
+    text-align: center;
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
+
+    .steps-cont{
+        text-align: left;
+        margin-top: var.$gutter-base * 3;
+
+        .grid-item{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            &:not(:last-child){
+                margin-bottom: var.$gutter-base * 2;
+                @media (max-width:768px) {
+                    margin-bottom: var.$gutter-base;
+                }
+            }
+            @media (max-width:500px) {
+                flex-direction: column;
+            }
+
+            .grid-item-inner{
+                margin-right: var.$gutter-base;
+                flex-basis: 15%;
+                flex-shrink: 0;
+                img{
+                    max-width: 80%;
+                    @media (max-width:768px) {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .grid-item-inner-sec{
+                .heading{
+                    font-size: var.$heading-size-small;
+                    font-weight: bold;
+                }     
+            }
+        }
+    }
+}

@@ -1,0 +1,862 @@
+{
+  "chefs": [
+    {
+      "fullname": "Саманта Ли",
+      "id": "qE7hKjL2",
+      "avatar_image": "https://picsum.photos/id/234/368/200",
+      "cuisine": [
+        "веганска",
+        "вегетаријанска"
+      ],
+      "address": {
+        "street": "123 Main St",
+        "street_number": "Apt 2",
+        "city": "San Francisco",
+        "postal_code": "94105"
+      },
+      "address_distance": 2500,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Џон Смит",
+          "description": "Веганските јадења на Саманта се неверојатни! Нејзините вкусови се смели и креативни, а јас секогаш се чувствувам задоволно откако ќе изедам еден од нејзините оброци."
+        },
+        {
+          "fullname": "Сара Ким",
+          "description": "Не сум веган, но храната на Саманта е толку добра што дури и месото не ми недостасува! Таа посветува толку многу грижа и внимание во секое јадење."
+        }
+      ]
+    },
+    {
+      "fullname": "Марио Роси",
+      "id": "mR8pGcN3",
+      "avatar_image": "https://picsum.photos/id/239/368/200",
+      "cuisine": [
+        "италијанска",
+        "медитеранска",
+        "мексиканска"
+      ],
+      "address": {
+        "street": "456 Oak St",
+        "street_number": "",
+        "city": "New York",
+        "postal_code": "10001"
+      },
+      "address_distance": 1500,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Меган Чен",
+          "description": "Тестенините на Марио се едни од најдобрите што сум ги имал! Сосот е секогаш совршено избалансиран, а порциите се дарежливи."
+        },
+        {
+          "fullname": "Роберт Џексон",
+          "description": "Ако барате автентична италијанска храна, не гледајте подалеку од ресторанот на Марио. Неговите јадења се направени со љубов и грижа, а тоа навистина се покажува по вкусот."
+        },
+        {
+          "fullname": "Џулија Ким",
+          "description": "Дојдов кај Марио со голема група пријатели и тој можеше лесно да не прими сите нас. Неговиот персонал е пријателски и внимателен, а храната беше вкусна."
+        }
+      ]
+    },
+    {
+      "fullname": "Хуанита Родригез",
+      "id": "tF9nVbO4",
+      "avatar_image": "https://picsum.photos/id/235/368/200",
+      "cuisine": [
+        "мексиканска"
+      ],
+      "address": {
+        "street": "789 Elm St",
+        "street_number": "",
+        "city": "Los Angeles",
+        "postal_code": "90012"
+      },
+      "address_distance": 3500,
+      "rating": 3,
+      "testimonials": [
+        {
+          "fullname": "Давид Ким",
+          "description": "Такото на Хуанита се надвор од овој свет! Особено ја сакам нејзината карне асада, која е секогаш сочна и вкусна."
+        },
+        {
+          "fullname": "Саманта Ли",
+          "description": "Јас сум веган, но сепак ја сакам храната на Хуанита. Таа има одличен избор на вегетаријански и вегански опции кои се исто толку вкусни како и нејзините јадења со месо."
+        }
+      ]
+    },
+    {
+      "fullname": "Лиам Чен",
+      "id": "sD6xZaP5",
+      "avatar_image": "https://picsum.photos/id/236/368/200",
+      "cuisine": [
+        "кинеска",
+        "веганска"
+      ],
+      "address": {
+        "street": "234 Maple St",
+        "street_number": "",
+        "city": "Chicago",
+        "postal_code": "60601"
+      },
+      "address_distance": 2000,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Меган Џонс",
+          "description": "Јадењата со пржење на Лиам се секогаш свежи и вкусни. Тој користи висококвалитетни состојки и можете да ја вкусите разликата."
+        },
+        {
+          "fullname": "Роберт Ли",
+          "description": "Јас сум голем обожавател на дим сумата на Лиам. Тој има одличен избор на кнедли и лепчиња, и сите се вкусни."
+        }
+      ]
+    },
+    {
+      "fullname": "Ема Дејвис",
+      "id": "lY2uXeQ6",
+      "avatar_image": "https://picsum.photos/id/233/368/200",
+      "cuisine": [
+        "традиционална", 
+        "вегетаријанска"
+      ],
+      "address": {
+        "street": "567 Oak Ave",
+        "street_number": "",
+        "city": "San Diego",
+        "postal_code": "92101"
+      },
+      "address_distance": 4000,
+      "rating": 4.1,
+      "testimonials": [
+        {
+          "fullname": "Џон Смит",
+          "description": "Готвењето на Ема ме потсетува на баба ми. Тоа е класично и утешно, и може да се каже дека вложува многу љубов во тоа."
+        },
+        {
+          "fullname": "Сара Џонсон",
+          "description": "Ако барате обилен оброк, ресторанот на Ема е местото каде што треба да одите. Нејзините порции се дарежливи, а вкусовите се богати."
+        }
+      ]
+    },
+    {
+      "fullname": "Антонио Гарсија",
+      "id": "kT1wNhR7",
+      "avatar_image": "https://picsum.photos/id/232/368/200",
+      "cuisine": [
+        "медитеранска",
+        "салати"
+      ],
+      "address": {
+        "street": "890 Pine St",
+        "street_number": "",
+        "city": "Seattle",
+        "postal_code": "98101"
+      },
+      "address_distance": 500,
+      "rating": 2,
+      "testimonials": [
+        {
+          "fullname": "Меган Чен",
+          "description": "Октопод на скара на Антонио е за умирање. Совршено е сварен и зачините се на место."
+        },
+        {
+          "fullname": "Роберт Џексон",
+          "description": "Ги обожавам свежите состојки што Антонио ги користи во готвењето. Сè е толку живописно."
+        }
+      ]
+    },
+    {
+      "fullname": "Борис Хернандез",
+      "id": "jU4yMiS8",
+      "avatar_image": "https://picsum.photos/id/231/368/200",
+      "cuisine": [
+        "мексиканска",
+        "италијанска"
+      ],
+      "address": {
+        "street": "789 Maple Ave",
+        "street_number": "Suite 4",
+        "city": "Los Angeles",
+        "postal_code": "90012"
+      },
+      "address_distance": 3500,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Александра Браун",
+          "description": "Такото на Борис се апсолутно неверојатни! Никогаш не сум пробал толку автентични мексикански вкусови надвор од самото Мексико."
+        },
+        {
+          "fullname": "Дејвид Нгуен",
+          "description": "Јас сум голем обожавател на борисовите салси и гвакамоле. Тие се толку свежи и вкусни, и навистина ги воздигнуваат неговите јадења."
+        },
+        {
+          "fullname": "Ела Ким",
+          "description": "Сум бил многу пати во ресторанот на Борис и никогаш не сум разочаран. Неговата храна е постојано вкусна, а неговиот персонал е секогаш пријателски и гостопримлив."
+        }
+      ]
+    },
+    {
+      "fullname": "Софија Чен",
+      "id": "iO6zKfT9",
+      "avatar_image": "https://picsum.photos/id/244/368/200",
+      "cuisine": [
+        "кинеска"
+      ],
+      "address": {
+        "street": "456 Elm St",
+        "street_number": "",
+        "city": "San Francisco",
+        "postal_code": "94103"
+      },
+      "address_distance": 1200,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Макс Смит",
+          "description": "Кнедлите на Софија се едноставно неверојатни! Секогаш се совршено приготвени, а вкусовите се толку богати и задоволувачки."
+        },
+        {
+          "fullname": "Рејчел Ким",
+          "description": "Јадев кинеска храна низ целиот свет, а онаа на Софија е една од најдобрите што сум ги пробала. Нејзините јадења се автентични и со вкус, а јас секогаш го напуштам нејзиниот ресторан чувствувајќи се среќна и задоволна."
+        }
+      ]
+    },
+    {
+      "fullname": "Карлос Гомез",
+      "id": "hP5xLgU0",
+      "avatar_image": "https://picsum.photos/id/225/368/200",
+      "cuisine": [
+        "традиционална"
+      ],
+      "address": {
+        "street": "234 Oak St",
+        "street_number": "",
+        "city": "New York",
+        "postal_code": "10002"
+      },
+      "address_distance": 800,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Оливија Ли",
+          "description": "Традиционалните јадења на Карлос се како патување назад во времето. Ме потсетуваат на храната што ја правеше баба ми, и толку се утешни и задоволувачки."
+        },
+        {
+          "fullname": "Џејк Џонсон",
+          "description": "Со години доаѓам во ресторанот на Карлос и тука секогаш се чувствувам како дома. Неговата храна е постојано вкусна, а неговиот персонал е како семејство."
+        },
+        {
+          "fullname": "Миа Родригез",
+          "description": "Пилешката супа на Карлос е како лек за душата. Кога и да се чувствувам лошо, доаѓам во неговиот ресторан и нарачувам сад. Тоа секогаш ме прави да се чувствувам подобро."
+        }
+      ]
+    },
+    {
+      "fullname": "Џузепе Роси",
+      "id": "gR3cItV1",
+      "avatar_image": "https://picsum.photos/id/229/368/200",
+      "cuisine": [
+        "италијанска",
+        "салати"
+      ],
+      "address": {
+        "street": "123 Main St",
+        "street_number": "",
+        "city": "Boston",
+        "postal_code": "02115"
+      },
+      "address_distance": 500,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Лукас Мартинез",
+          "description": "Јадењата со тестенини на Џузепе се неверојатни! Тие се толку свежи и вкусни, а порциите се во право."
+        },
+        {
+          "fullname": "Саманта Пател",
+          "description": "Сакам да доаѓам на ручек во ресторанот на Џузепе. Неговите салати се толку креативни и вкусни, и тие се совршениот избор во средината на денот."
+        }
+      ]
+    },
+    {
+      "fullname": "Нина Ли",
+      "id": "fE2vHuW3",
+      "avatar_image": "https://picsum.photos/id/227/368/200",
+      "cuisine": [
+        "медитеранска"
+      ],
+      "address": {
+        "street": "789 Elm St",
+        "street_number": "",
+        "city": "San Diego",
+        "postal_code": "92109"
+      },
+      "address_distance": 2500,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Арон Браун",
+          "description": "Хумусот на Нина е надвор од овој свет! Толку е кремаст и вкусен, и совршено се вклопува со нејзиниот топол леб од пита."
+        },
+        {
+          "fullname": "Грејс Ким",
+          "description": "Со години сум редовен во ресторанот на Нина и секогаш заминувам среќна и задоволна. Нејзината храна е постојано вкусна, а нејзиниот персонал е секогаш љубезен и гостопримлив."
+        },
+        {
+          "fullname": "Мајкл Нгуен",
+          "description": "Јагнешките јадења на Нина ми се омилени! Секогаш се совршено приготвени, а вкусовите се толку богати и задоволувачки."
+        }
+      ]
+    },
+    {
+      "fullname": "Карлос Родригез",
+      "id": "eD9bGyX4",
+      "avatar_image": "https://picsum.photos/id/228/368/200",
+      "cuisine": [
+        "мексиканска",
+        "кето"
+        
+      ],
+      "address": {
+        "street": "456 Oak St",
+        "street_number": "",
+        "city": "San Francisco",
+        "postal_code": "94110"
+      },
+      "address_distance": 900,
+      "rating": 3,
+      "testimonials": [
+        {
+          "fullname": "Ема Смит",
+          "description": "Такото на Карлос се најдобрите што сум ги имал! Тие се толку вкусни и задоволувачки, и ми се допаѓа разновидноста на додатоците што ги нуди."
+        },
+        {
+          "fullname": "Ноа Пател",
+          "description": "Секогаш доаѓам во ресторанот на Карлос за неговото гуакамоле. Толку е свеж и кремаст, и навистина ги надополнува неговите јадења."
+        }
+      ]
+    },
+    {
+      "fullname": "Јасмин Ли",
+      "id": "aT7kFzY5",
+      "avatar_image": "https://picsum.photos/id/220/368/200",
+      "cuisine": [
+        "веганска",
+        "риба"
+      ],
+      "address": {
+        "street": "789 Main St",
+        "street_number": "",
+        "city": "Seattle",
+        "postal_code": "98122"
+      },
+      "address_distance": 1500,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Ејвори Браун",
+          "description": "Веганските хамбургери на Јасмин се неверојатни"
+        }
+      ]
+    },
+    {
+      "fullname": "Хуан Хернандез",
+      "id": "bN8hCxZ6",
+      "avatar_image": "https://picsum.photos/id/244/368/200",
+      "cuisine": [
+        "традиционална",
+        "кето",
+        "риба"
+      ],
+      "address": {
+        "street": "321 Oak St",
+        "street_number": "",
+        "city": "Chicago",
+        "postal_code": "60607"
+      },
+      "address_distance": 1200,
+      "rating": 3,
+      "testimonials": [
+        {
+          "fullname": "Лила Пател",
+          "description": "Јадењето со пилешко и ориз на Хуан ми е омилено! Тоа е толку утешно и вкусно, и секогаш доаѓа до место."
+        },
+        {
+          "fullname": "Вилијам Ким",
+          "description": "Го сакам ресторанот на Хуан поради неговата пријатна атмосфера и вкусната храна за удобност. Тоа е совршено место за одење во студената зимска ноќ."
+        }
+      ]
+    },
+    {
+      "fullname": "Миа Чен",
+      "id": "cM5uVwA7",
+      "avatar_image": "https://picsum.photos/id/214/368/200",
+      "cuisine": [
+        "кинеска"
+      ],
+      "address": {
+        "street": "456 Main St",
+        "street_number": "",
+        "city": "New York",
+        "postal_code": "10013"
+      },
+      "address_distance": 800,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Оливер Браун",
+          "description": "Кнедлите на Миа се најдобрите што сум ги имал! Тие се толку сочни и вкусни, а тестото е совршено тенко и крцкаво."
+        },
+        {
+          "fullname": "Емили Пател",
+          "description": "Доаѓам во ресторанот на Миа барем еднаш неделно по нејзината топла и кисела супа. Тоа е совршено прибирање во студен ден!"
+        },
+        {
+          "fullname": "Итан Ким",
+          "description": "Пилешкото сусам на Миа е моето јадење! Секогаш е совршено зготвен и толку задоволувачки."
+        }
+      ]
+    },
+    {
+      "fullname": "Алесандра Роси",
+      "id": "dP1yQrB8",
+      "avatar_image": "https://picsum.photos/id/213/368/200",
+      "cuisine": [
+        "италијанска",
+        "риба"
+      ],
+      "address": {
+        "street": "123 Elm St",
+        "street_number": "",
+        "city": "Miami",
+        "postal_code": "33131"
+      },
+      "address_distance": 3000,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Ела Браун",
+          "description": "Пиците на Алесандра се неверојатни! Кората е совршено крцкава, а додатоците се секогаш свежи и вкусни."
+        },
+        {
+          "fullname": "Исак Пател",
+          "description": "Сакам да доаѓам во ресторанот на Алесандра за нејзините домашни јадења со тестенини. Тие се толку автентични и вкусни!"
+        }
+      ]
+    },
+    {
+      "fullname": "Софи Ли",
+      "id": "zO9xJnC9",
+      "avatar_image": "https://picsum.photos/id/238/368/200",
+      "cuisine": [
+        "вегетаријанска",
+        "веганска",
+        "риба"
+      ],
+      "address": {
+        "street": "789 Oak St",
+        "street_number": "",
+        "city": "Los Angeles",
+        "postal_code": "90028"
+      },
+      "address_distance": 500,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Ноа Браун",
+          "description": "Веге плескавицата на Софи е најдобрата што сум ја имал! Тоа е толку вкусно и задоволувачко."
+        }
+      ]
+    },
+    {
+      "fullname": "Марија Хернандез",
+      "id": "yI6tKeD0",
+      "avatar_image": "https://picsum.photos/id/268/368/200",
+      "cuisine": [
+        "мексиканска",
+        "италијанска"
+      ],
+      "address": {
+        "street": "321 Maple St",
+        "street_number": "",
+        "city": "Houston",
+        "postal_code": "77002"
+      },
+      "address_distance": 1500,
+      "rating": 5,
+      "testimonials": [
+        {
+          "fullname": "Оливија Браун",
+          "description": "Гуакамолето на Марија е најдоброто што сум го имала! Тоа е толку свежо и вкусно."
+        },
+        {
+          "fullname": "Џејкоб Пател",
+          "description": "Ги сакам такосите на Марија! Месото е секогаш совршено зачинето, а тортиљите се толку меки и вкусни."
+        },
+        {
+          "fullname": "Ема Ким",
+          "description": "Ресторанот на Марија ги има најдобрите маргарити во градот! Тие се толку освежувачки и совршено избалансирани."
+        }
+      ]
+    },
+    {
+      "fullname": "Сара Џонсон",
+      "id": "qE7hKjL212",
+      "avatar_image": "https://picsum.photos/id/284/368/200",
+      "cuisine": [
+        "салати"
+      ],
+      "address": {
+        "street": "456 Oak St",
+        "street_number": "",
+        "city": "San Francisco",
+        "postal_code": "94102"
+      },
+      "address_distance": 900,
+      "rating": 4,
+      "testimonials": [
+        {
+          "fullname": "Ава Браун",
+          "description": "Салатите на Сара се најдобри! Тие се толку свежи и вкусни, а додатоците се секогаш совршено избалансирани."
+        },
+        {
+          "fullname": "Логан Пател",
+          "description": "Цело време доаѓам во ресторанот на Сара за нејзините неверојатни салати. Тие се совршена опција за здрав ручек!"
+        },
+        {
+          "fullname": "Миа Ким",
+          "description": "Ресторанот на Сара е моето место за брз и здрав оброк. Сакам разновидност на салати и додатоци!"
+        }
+      ]
+    }
+  ],
+  "menu": [
+    {
+      "meal_name": "Вегански сад",
+      "meal_image": "https://picsum.photos/id/301/368/200",
+      "meal_rating": 3,
+      "meal_price": 600,
+      "meal_description": "Вкусен вегански сад со киноа, печен зеленчук и прелив од лимон.",
+      "meal_prep_time": 20,
+      "cuisine": [
+        "веганска",
+        "италијанска"
+      ],
+      "availability": "денес",
+      "delivery": "испорака",
+      "chef": "Саманта Ли",
+      "alergeni": [
+        "јатки"
+      ]
+    },
+    {
+      "meal_name": "Вегетаријанска лазања",
+      "meal_image": "https://picsum.photos/id/302/368/200",
+      "meal_rating": 4.5,
+      "meal_price": 899,
+      "meal_description": "Слоеви од тестенини, спанаќ и сирење рикота, прелиени со богат сос од домати.",
+      "meal_prep_time": 40,
+      "cuisine": [
+        "Италијанска",
+        "Кето"
+      ],
+      "availability": "утре",
+      "delivery": "испорака",
+      "chef": "Марио Роси",
+      "alergeni": [
+        "лактоза"
+      ]
+    },
+    {
+      "meal_name": "Такос од говедско месо",
+      "meal_image": "https://picsum.photos/id/304/368/200",
+      "meal_rating": 4.2,
+      "meal_price": 599,
+      "meal_description": "Три меки пченкарни тортиљи исполнети со зачинето мелено говедско месо, зелена салата и сирење.",
+      "meal_prep_time": 25,
+      "cuisine": [
+        "Мексиканска",
+        "Медитеранска"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Хуанита Родригез",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Медитеранска салата",
+      "meal_image": "https://picsum.photos/id/305/368/200",
+      "meal_rating": 4.6,
+      "meal_price": 650,
+      "meal_description": "Освежителна салата со ромска зелена салата, чери домати, фета сирење и винегрет од лимон.",
+      "meal_prep_time": 15,
+      "cuisine": [
+        "Медитеранска",
+        "Кето"
+      ],
+      "availability": "нарачка",
+      "delivery": "испорака",
+      "chef": "Лијам Чен",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Пржен ориз со ракчиња",
+      "meal_image": "https://picsum.photos/id/306/368/200",
+      "meal_rating": 4.4,
+      "meal_price": 699,
+      "meal_description": "Класично кинеско јадење со пржен ориз, ракчиња и зеленчук.",
+      "meal_prep_time": 30,
+      "cuisine": [
+        "Кинеска"
+      ],
+      "availability": "утре",
+      "delivery": "испорака",
+      "chef": "Eма Давис",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Лосос на скара",
+      "meal_image": "https://picsum.photos/id/307/368/200",
+      "meal_rating": 4.7,
+      "meal_price": 850,
+      "meal_description": "Вкусно филе лосос, печено на скара до совршенство и послужено со печен зеленчук.",
+      "meal_prep_time": 35,
+      "cuisine": [
+        "Риба"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Атнонио Гарци",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Вегански Буда Боул",
+      "meal_image": "https://picsum.photos/id/308/368/200",
+      "meal_rating": 4.5,
+      "meal_price": 720,
+      "meal_description": "Обилен и здрав вегански оброк со кафеав ориз, печен сладок компир, сотено кељ и зачинета наут, прелиен со кремаст прелив од таани.",
+      "meal_preparation_time": 30,
+      "cuisine": [
+        "веганска",
+        "риба"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Саманта Ли",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Шпагети Карбонара",
+      "meal_image": "https://picsum.photos/id/311/368/200",
+      "meal_rating": 4.8,
+      "meal_price": 250,
+      "meal_description": "Класично италијанско јадење со тестенини од шпагети префрлени со кремасто јајце и сос од пармезан, крцкава панцета и свежо испукан црн пипер.",
+      "meal_preparation_time": 25,
+      "cuisine": [
+        "Италијанска",
+        "Вегетаријанска"
+      ],
+      "availability": "денес",
+      "delivery": "испорака",
+      "chef": "Марио Роси",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Медитеранска мезе послужавник",
+      "meal_image": "https://picsum.photos/id/312/368/200",
+      "meal_rating": 4.2,
+      "meal_price": 540,
+      "meal_description": "Послужавник за споделување со различни медитерански намази и намази, вклучувајќи хумус, цацики, баба гануш и печен црвен пипер, сервиран со пита леб и зеленчук.",
+      "meal_preparation_time": 20,
+      "cuisine": [
+        "Медитеранска"
+      ],
+      "availability": "утре",
+      "delivery": "pickup",
+      "chef": "Хуанита Родригез",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Кокошка Кунг Пао",
+      "meal_image": "https://picsum.photos/id/313/368/200",
+      "meal_rating": 4.6,
+      "meal_price": 250,
+      "meal_description": "Зачинето и вкусно кинеско јадење со нежно пилешко, пржено со кикирики, зеленчук и зачинет сечуан сос.",
+      "meal_preparation_time": 30,
+      "cuisine": [
+        "Кинеска"
+      ],
+      "availability": "нарачка",
+      "delivery": "испорака",
+      "chef": "Лијам Чен",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Риба такос",
+      "meal_image": "https://picsum.photos/id/318/368/200",
+      "meal_rating": 4.4,
+      "meal_price": 670,
+      "meal_description": "Свежо и вкусно мексиканско јадење со изматена риба со пиво, крем од авокадо, пико де гало и сечкана зелка, сето тоа завиткано во топли тортиљи.",
+      "meal_preparation_time": 35,
+      "cuisine": [
+        "Мексиканска"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Ема Давис",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Зеленчук Промешајте Фрај",
+      "meal_image": "https://picsum.photos/id/315/368/200",
+      "meal_rating": 4.3,
+      "meal_price": 599,
+      "meal_description": "Шарена и вкусна пржена со разновидност од свеж зеленчук и протеин по ваш избор, сето тоа пржено со солен сос и сервирано над ориз.",
+      "meal_preparation_time": 25,
+      "cuisine": [
+        "Вегетаријанска"
+      ],
+      "availability": "денес",
+      "delivery": "испорака",
+      "chef": "Атнонио Гарциа",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Јагнешки рифови на скара",
+      "meal_image": "https://picsum.photos/id/317/368/200",
+      "meal_rating": 4.9,
+      "meal_price": 1300,
+      "meal_description": "Срдечно и вкусно јадење со печени јагнешки рифови, зачинети со билки и зачини и сервирано со печен зеленчук и пире од компири.",
+      "meal_preparation_time": 40,
+      "cuisine": [
+        "Традиционална"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Борис Хернандес",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Скампи од ракчиња",
+      "meal_image": "https://picsum.photos/id/316/368/200",
+      "meal_rating": 4.6,
+      "meal_price": 799,
+      "meal_description": "Класично италијанско јадење со нежни ракчиња, пржени со лук, бело вино и путер и сервирани преку тестенини.",
+      "meal_preparation_time": 30,
+      "cuisine": [
+        "Италијанска"
+      ],
+      "availability": "утре",
+      "delivery": "испорака",
+      "chef": "Софија Чен",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Грчка салата",
+      "meal_image": "https://picsum.photos/id/321/368/200",
+      "meal_rating": 4.2,
+      "meal_price": 300,
+      "meal_description": "Освежителна и здрава салата со мешани зеленило, фета сирење, маслинки каламата, краставица и домат, сето тоа облечено со винегрет од лимон.",
+      "meal_preparation_time": 15,
+      "cuisine": [
+        "Салати"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Карлос Гомез",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Кето Чизбургер",
+      "meal_image": "https://picsum.photos/id/322/368/200",
+      "meal_rating": 4.1,
+      "meal_price": 350,
+      "meal_description": "Вкусен чизбургер со малку јаглехидрати со сочно говедско пиво, чедар сирење, зелена салата, домат и домашна кето пунџа.",
+      "meal_preparation_time": 35,
+      "cuisine": [
+        "Кето"
+      ],
+      "availability": "нарачка",
+      "delivery": "испорака",
+      "chef": "Џузепе Роси",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Пилешки фахити",
+      "meal_image": "https://picsum.photos/id/323/368/200",
+      "meal_rating": 4.4,
+      "meal_price": 455,
+      "meal_description": "Вртење и вкусно јадење со нежно пилешко, пржено со кромид и пиперки и послужено со топли тортиљи, салса и гвакамола.",
+      "meal_preparation_time": 25,
+      "cuisine": [
+        "Мексиканска"
+      ],
+      "availability": "утре",
+      "delivery": "испорака",
+      "chef": "Нина Ли",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Медитеранска чинија",
+      "meal_image": "https://picsum.photos/id/324/368/200",
+      "meal_rating": 4.7,
+      "meal_price": 989,
+      "meal_description": "Вкусна и здрава чинија со хумус, фалафел, табуле, пилешко на скара и леб од пита.",
+      "meal_preparation_time": 30,
+      "cuisine": [
+        "Медитеранска"
+      ],
+      "availability": "денес",
+      "delivery": "pickup",
+      "chef": "Карлос Гомез",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Веганска печурка Строганов",
+      "meal_image": "https://picsum.photos/id/325/368/200",
+      "meal_rating": 4.2,
+      "meal_price": 760,
+      "meal_description": "Кремаста и вкусна веганска верзија на класичниот строганов, со печурки, кромид и крем сос од кашу, сервирана над тестенини.",
+      "meal_preparation_time": 35,
+      "cuisine": [
+        "веганска"
+      ],
+      "availability": "денес",
+      "delivery": "испорака",
+      "chef": "Јасмин Ли",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Лосос на скара",
+      "meal_image": "https://picsum.photos/id/326/368/200",
+      "meal_rating": 4.8,
+      "meal_price": 1200,
+      "meal_description": "Здраво и вкусно јадење со печен лосос, зачинет со билки и зачини и сервиран со печен зеленчук и киноа.",
+      "meal_preparation_time": 40,
+      "cuisine": [
+        "Риба"
+      ],
+      "availability": "утре",
+      "delivery": "pickup",
+      "chef": "Хуан Хернандез",
+      "alergeni": []
+    },
+    {
+      "meal_name": "Сечуан зачинета тофу",
+      "meal_image": "https://picsum.photos/id/327/368/200",
+      "meal_rating": 4.5,
+      "meal_price": 750,
+      "meal_description": "Зачинето и вкусно кинеско јадење со тофу, пржено со сечуан бибер, чили пиперки и лук, и сервирано над ориз.",
+      "meal_preparation_time": 30,
+      "cuisine": [
+        "Кинеска"
+      ],
+      "availability": "денес",
+      "delivery": "испорака",
+      "chef": "Миа Чен",
+      "alergeni": []
+    }
+  ]
+}

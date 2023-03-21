@@ -1,0 +1,9 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+.calendar-slider-menu{
+    @extend %section;
+    @extend %wrap;
+    text-align: center;
+}

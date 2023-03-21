@@ -1,0 +1,58 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+.widget-faq {
+  @extend %section;
+  @extend %wrap;
+  text-align: center;
+  .grid-parent {
+    .grid-item {
+      flex-basis: 100%;
+    }
+  }
+
+  .faqs .faq {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var.$text-color-primary;
+    text-align: left;
+
+    &.open{
+        .faq-question {
+            margin-bottom: 15px;
+          }
+          .faq-answer {
+            max-height: 1000px;
+            opacity: 1;
+          }
+    }
+
+    .faq-question {
+      position: relative;
+      font-size: 20px;
+      padding-right: 80px;
+      transition: all 0.4s ease;
+
+      font-weight: bold;
+      i {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+        color: var.$text-color-primary;
+      }
+      
+    }
+    .faq-answer {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+      }
+
+  }
+
+}

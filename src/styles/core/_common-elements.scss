@@ -1,0 +1,174 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math" ;
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: normal;
+  line-height: 1.5;
+  background-color: var.$background-color-base;
+  padding-top: 77.43px;
+}
+
+h1 {
+  color:var.$text-color-primary;
+  font-size: var.$heading-size-bigger;
+  @media (max-width:1000px) {
+    font-size: var.$heading-size-big;
+  }
+  @media (max-width:768px) {
+    font-size: var.$heading-size-medium;
+  }
+}
+
+h2,
+h3 {
+  font-family: var.$heading-family-base;
+  font-size: var.$heading-size-big;
+}
+h4{
+  font-size: var.$heading-size-bigger;
+  margin-bottom: 0;
+}
+h5{
+  font-family: var.$heading-family-base;
+  font-size: var.$heading-size-medium;
+  margin-bottom: 0;
+  margin-top: var.$gutter-base;
+}
+.btn{
+  background-color: var.$text-color-primary;
+  color: var.$text-color-secondary;
+  text-decoration: none;
+  padding: math.div(var.$gutter-base,3) (var.$gutter-base);
+  border-radius: 2em;
+  font-size: var.$font-size-small;
+  display: inline-block;
+}
+
+.grid-parent{
+  display: flex;
+  margin-right: -(math.div(var.$gutter-base, 1.5));
+  margin-bottom: -(math.div(var.$gutter-base, 1.5));
+  flex-wrap: wrap;
+
+
+  .grid-item{
+    flex-basis: 33.333%;
+    margin-bottom: math.div(var.$gutter-base, 1.5);
+    @media (max-width:768px) {
+      flex-basis: 50% ;
+    }
+
+    @media (max-width:425px) {
+      flex-basis: 100%;
+    }
+  }
+
+  .grid-item-inner{
+    margin-right: math.div(var.$gutter-base, 1.5);
+
+    height: 100%;
+  }
+}
+.content-section{
+  @extend %section;
+  @extend %wrap;
+  text-align: center;
+  overflow: hidden;
+
+  h2{
+      margin-bottom: 0;
+  }
+
+  p{
+      margin-bottom: 0;
+      margin-top: var.$gutter-base;
+  }
+}
+
+.main-title {
+  position: relative;
+  display: inline-block;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 3px;
+    background-color: var.$text-color-primary;
+  }
+
+  &:before {
+    left: -190px;
+  }
+
+  &:after {
+    right: -190px;
+  }
+}
+
+.mb-5 {
+  margin-bottom: 30px;
+}
+.checkbox-circle:not(:last-child){
+  margin-bottom: math.div(var.$gutter-base, 3);
+}
+.checkbox-circle input[type="checkbox"] {
+  display: none;
+}
+.checkbox-circle input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  font: 14px/20px "Open Sans", Arial, sans-serif;
+  cursor: pointer;
+}
+.checkbox-circle input[type="checkbox"]:hover + label:hover {
+  color: rgb(23, 86, 228);
+}
+.checkbox-circle input[type="checkbox"]:hover + label:before {
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid var.$text-color-secondary;
+  background-color: var.$text-color-primary;
+  box-shadow: 0 0 0 1px #000;
+}
+.checkbox-circle input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+.checkbox-circle input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #343a3f;
+  border-radius: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.2s, transform 0.3s ease-in-out;
+  transition: all 0.2s, transform 0.3s ease-in-out;
+  background-color: transparent;
+}
+.checkbox-circle input[type="checkbox"]:checked + label:before {
+  border-radius: 1em;
+  border: 2px solid #fff;
+  width: 1.2em;
+  height: 1.2em;
+  background-color:var.$text-color-primary;
+  box-shadow: 0 0 0 1px #000;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.MenuOverview .location {
+  display: block !important;
+  margin-left: 0 !important;
+}

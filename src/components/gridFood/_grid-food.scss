@@ -1,0 +1,95 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+.grid-food{
+    @extend %section;
+    @extend %wrap;
+    .h3{
+        text-transform: uppercase;
+        color: var.$text-color-primary;
+        font-weight: bold;
+        font-size: var.$heading-size-small;
+    }
+    .grid-parent{
+        margin-top: var.$gutter-base;
+        img{
+            border-radius: 32px 32px 0px 0px;
+        }
+
+        .grid-item{
+           .grid-item-inner{
+            background-color: var.$text-color-secondary;
+            border-radius: 2rem;
+
+            .inner-content{
+                padding: 1rem;
+                .name-price{
+                    display: flex;
+                    justify-content: space-between;
+
+                    p{
+                        font-weight: bold;
+                        font-size: var.$font-size-base;
+                        margin-bottom: 0;
+                    };
+
+                    .price{
+                            color: var.$text-color-primary
+                    }
+                }
+
+                .star-icons { color: var.$text-color-primary;}
+
+                .time-cont{
+                    margin-top: math.div(var.$gutter-base, 2);
+                    margin-bottom: math.div(var.$gutter-base, 2);
+
+                }
+                .inner-btn{
+                    text-align: center;
+                    .btn{
+                        border: none;
+                    }
+
+                }
+            }
+           }
+        }
+
+
+    }
+
+   .grid-item-inner{
+    background-color: var.$text-color-secondary;
+
+    .inner-content{
+        padding: 1rem;
+        // text-align: center;
+        .name-price{
+            display: flex;
+            justify-content: space-between;
+
+            p{
+                font-weight: bold;
+                font-size: var.$heading-size-small;
+                margin-bottom: 0;
+            };
+
+            .price{
+                    color: var.$text-color-primary
+            }
+        }
+        .time-cont{
+            margin-top: math.div(var.$gutter-base, 2);
+        }
+        .inner-btn{
+            text-align: center;
+            .btn{
+                border: none;
+            }
+
+        }
+    }
+   }
+}

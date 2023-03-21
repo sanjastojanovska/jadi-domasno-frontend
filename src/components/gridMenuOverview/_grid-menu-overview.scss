@@ -1,0 +1,90 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+
+.grid-menu-overview{
+    @extend %section;
+    @extend %wrap;
+    text-align: center;
+
+    .btn-chefs{
+        margin-top: var.$gutter-base * 2;
+        border: 0;        
+    }
+
+    .grid-parent{
+        margin-bottom: -(math.div(var.$gutter-base, 1.5));
+
+        .grid-item{
+            
+            margin-bottom: math.div(var.$gutter-base, 1.5);
+
+            img{
+                display: block;
+                border-radius: 2em;  
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: top;
+            }
+
+            .grid-item-inner{
+                border-radius: 50px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                background-color: var.$background-color-tertiary;
+                .content{
+                    padding: var.$gutter-base;
+                }
+            
+                .head-flex{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-bottom: math.div(var.$gutter-base, 2);
+        
+                    p{
+                        font-size: var.$heading-size-tiny;
+                        margin-bottom: 5px;
+                    }
+                    .star-icon{
+                        display: flex;
+                    }
+                }
+        
+                .food-count{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                        ul{
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            color:var.$text-color-primary ;  
+                            text-align: left;
+                    }       
+        
+                    .location{
+                        .distance{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            img{
+                                width: var.$gutter-base;
+                                margin-right: 10px;
+                            }
+                        }
+                        .btn{
+                            border-radius: 1em;
+                            border: none;
+                            font-size:var.$font-size-tiny ;
+                            margin-top: math.div(var.$gutter-base,2.5);
+                        }
+                    }
+                }
+            } 
+        }
+    }
+
+}  

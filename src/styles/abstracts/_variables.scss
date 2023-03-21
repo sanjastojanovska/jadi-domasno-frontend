@@ -1,0 +1,46 @@
+@use 'sass:math';
+
+@function rem-calc($size) {
+  @return (math.div($size, 16)) * 1rem;
+}
+
+// Font settings
+$font-family-base:           'Roboto', sans-serif;
+$heading-family-base:        'Bad Script', cursive;
+
+$font-size-tiny:             rem-calc(12);
+$font-size-small:             rem-calc(14);
+$font-size-base:             rem-calc(16);
+$font-size-medium:           rem-calc(18);
+
+$heading-size-tiny:          rem-calc(20);
+$heading-size-small:         rem-calc(24);
+$heading-size-medium:         rem-calc(32);
+$heading-size-big:           rem-calc(40);
+$heading-size-bigger:        rem-calc(57);
+$heading-size-usp:            rem-calc(66);
+
+$line-height-base:           1.5;
+$line-height-small:          1.25;
+
+$font-weight-normal:         400;
+$font-weight-bold:           700;
+$font-weight-base:           $font-weight-normal;
+
+// Size settings
+$gutter-base:                rem-calc(30);
+
+// Color settings
+$text-color-base:            #000000;
+$text-color-primary: #F1592A;
+$text-color-secondary:       #FFF;
+$text-color-tertiary: #D7D7D7;
+
+$background-color-base:     #FFF8F0;
+$background-color-primary:   #F1F1F1;
+$background-color-secondary: #262D2F;
+$background-color-tertiary: #FFF2E2;
+$background-color-chef: #C1C1C1;
+$background-color-detail: #ECDB9D;
+
+$hover-color:                darken($text-color-primary, 10%);

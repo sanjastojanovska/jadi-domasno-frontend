@@ -1,0 +1,181 @@
+@use "../../styles/abstracts/mixins"as mix;
+@use "../../styles/abstracts/variables"as var;
+@use "sass:math";
+
+.header {
+    background-color: var.$background-color-primary;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: math.div(var.$gutter-base, 3);
+    text-decoration: none;
+    color: var.$text-color-base;
+    outline: none;
+
+    img {
+        width: 30px;
+        margin-right: math.div(var.$gutter-base, 3);
+    }
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    color: var.$text-color-primary;
+}
+
+.header .menu {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    border: 0;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header.menu-open .menu {
+    max-height: 100%;
+    overflow: scroll;
+}
+
+.header.menu-open .menu-icon .navicon {
+    background: transparent;
+}
+
+.header.menu-open .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header.menu-open .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header.menu-open .menu-icon:not(.steps) .navicon:before,
+.header.menu-open .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.header.menu-open .secondary-actions {
+    display: none;
+}
+
+.secondary-actions {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    @media (min-width:1000px) and (max-width: 1199px)  {
+        display: none;
+    }
+
+    span {
+        display: none;
+    }
+
+   .btn-header{
+    padding: math.div(var.$gutter-base, 3) var.$gutter-base * 2;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    @media (max-width:500px) {
+        display: none;
+    }
+
+    &:hover{
+        border-color: var.$text-color-primary;
+    }
+    
+    i{
+        margin-right: math.div(var.$gutter-base, 3);
+    }
+   }
+}
+
+
+@media (min-width: 1000px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header li {
+        flex-basis: auto;
+    }
+
+    .header li a {
+        flex-direction: column;
+        padding: math.div(var.$gutter-base, 3) math.div(var.$gutter-base, 2);
+    }
+
+    .header .menu {
+        display: flex;
+        align-items: flex-end;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    .secondary-actions span {
+        display: inline-block;
+    }
+}

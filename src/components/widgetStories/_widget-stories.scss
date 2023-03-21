@@ -1,0 +1,25 @@
+@use "../../styles/abstracts/mixins" as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "sass:math";
+
+.widget-stories{
+    @extend %section;
+    @extend %wrap;
+    text-align: center;
+    
+    .grid-parent{
+        display: flex;
+        margin-top: var.$gutter-base * 3;
+        
+        .grid-item{
+            
+            .grid-item-inner{
+
+                p{
+                    margin-bottom: 0;
+                    margin-top: var.$gutter-base;
+                }
+            }
+        }
+    }
+}
